@@ -8,7 +8,6 @@
  * arr[i] > arr[i + 1] > ... > arr[arr.length - 1]
 **/
 
-
 bool validMountainArray(int* arr, int arrSize){
     int i;
     int max;
