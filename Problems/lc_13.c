@@ -30,7 +30,6 @@ int romanToInt(char * s)
     num = 0;
     while (i < 13 && s[0] != '\0')
     {
-        printf("%d %d %s %s\n", num, spn, romans[i], s);
         spn = count(s, romans[i], i, &len);
 
         num += (vals[i] * spn);
