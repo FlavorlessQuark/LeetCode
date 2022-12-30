@@ -16,3 +16,19 @@ class Solution:
             count += 1
 
         return max(result, count)
+
+    
+    class Solution:
+    def lengthOfLongestSubstring(self, s: str) -> int:
+        maximum = 0
+        start = 0
+        dp = {}
+        for i in range(len(s)):
+            if (s[i] in dp and dp[s[i]] >= start):
+                start = dp[s[i]] + 1
+                # print("IS there", s[i], start)
+            # else:
+            maximum = max(maximum, (i + 1) - start)
+            dp[s[i]] = i
+            # print(dp, maximum, s[i], start, i)
+        return maximum
